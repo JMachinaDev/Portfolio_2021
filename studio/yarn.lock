@@ -4287,8 +4287,8 @@ html-encoding-sniffer@^1.0.2:
     whatwg-encoding "^1.0.1"
 
 html-entities@^1.2.0:
-  version "1.3.3"
-  resolved "https://registry.npmjs.org/html-entities/-/html-entities-1.3.3.tgz#3dca638a43ee7de316fc23067398491152ad4736"
+  version "1.4.0"
+  resolved "https://registry.npmjs.org/html-entities/-/html-entities-1.4.0.tgz#cfbd1b01d2afaf9adca1b10ae7dffab98c71d2dc"
 
 http-errors@1.7.2:
   version "1.7.2"
@@ -5239,8 +5239,8 @@ map-visit@^1.0.0:
     object-visit "^1.0.0"
 
 math-expression-evaluator@^1.2.14:
-  version "1.3.6"
-  resolved "https://registry.npmjs.org/math-expression-evaluator/-/math-expression-evaluator-1.3.6.tgz#fb8c447110093dd5f32e7aec877dd247e3c98eb1"
+  version "1.3.7"
+  resolved "https://registry.npmjs.org/math-expression-evaluator/-/math-expression-evaluator-1.3.7.tgz#1b62225db86af06f7ea1fd9576a34af605a5b253"
 
 md5-o-matic@^0.1.1:
   version "0.1.1"
@@ -7795,8 +7795,8 @@ style-loader@^0.20.1:
     schema-utils "^0.4.5"
 
 style-value-types@^3.1.9:
-  version "3.1.9"
-  resolved "https://registry.npmjs.org/style-value-types/-/style-value-types-3.1.9.tgz#faf7da660d3f284ed695cff61ea197d85b9122cc"
+  version "3.2.0"
+  resolved "https://registry.npmjs.org/style-value-types/-/style-value-types-3.2.0.tgz#eb89cab1340823fa7876f3e289d29d99c92111bb"
   dependencies:
     hey-listen "^1.0.8"
     tslib "^1.10.0"
@@ -8253,8 +8253,8 @@ url@^0.11.0:
     querystring "0.2.0"
 
 use-isomorphic-layout-effect@^1.0.0:
-  version "1.1.0"
-  resolved "https://registry.npmjs.org/use-isomorphic-layout-effect/-/use-isomorphic-layout-effect-1.1.0.tgz#4db2111e0d53ca694187ea5fd5cb2ba610286fe0"
+  version "1.1.1"
+  resolved "https://registry.npmjs.org/use-isomorphic-layout-effect/-/use-isomorphic-layout-effect-1.1.1.tgz#7bb6589170cd2987a152042f9084f9effb75c225"
 
 use-latest@^1.0.0:
   version "1.2.0"

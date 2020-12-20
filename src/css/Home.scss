@@ -1,0 +1,62 @@
+// .container-home {
+// 	margin: 0;
+// 	padding: 0;
+// 	height: 100vh;
+// 	width: 100vw;
+// 	overflow: hidden;
+// 	background: black;
+// 	font-family: "Poppins", sans-serif;
+// }
+#img-profile {
+	background-image: url(../images/profile.png);
+	background-size: cover;
+	height: 125px;
+	width: 125px;
+	padding: 0;
+	margin: auto;
+	border-radius: 50%;
+	border: 3px solid red;
+	// box-shadow: 0px 0px 0px 2x #fff inset;
+}
+
+.container-glass {
+	display: inline-block;
+	background: rgba(255, 255, 255, 0.233);
+	// padding: 2em 6em;
+	padding: 2% 6%;
+	color: #ff0000;
+
+	border-radius: 3em;
+	position: absolute;
+	top: 50%;
+	left: 25%;
+	z-index: 1;
+	// the code below is what primarily creates the Effect Glassmorphism
+	backdrop-filter: blur(10px);
+	// border: solid 2px transparent;
+	background-clip: padding-box;
+	box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.3);
+
+	h2 {
+		font-size: 2.7em;
+	}
+	h2,
+	h3 {
+		margin: 0;
+	}
+	p {
+		margin: 0;
+	}
+}
+
+.h1 {
+	font-size: 4rem;
+	clip-path: inset(0 0 0 0);
+	display: block;
+	position: absolute;
+	top: 40%;
+	left: 25%;
+	margin: auto;
+	padding: 10px;
+	color: #ff0000;
+}
