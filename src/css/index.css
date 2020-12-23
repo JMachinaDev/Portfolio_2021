@@ -1,0 +1,112 @@
+@import url(https://unpkg.com/@tailwindcss/typography@0.2.x/dist/typography.min.css);
+@import url(https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css);
+/* @import url(https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,600&display=swap); */
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap);
+
+:root {
+	--gradiant-color: linear-gradient(
+		90deg,
+		hsla(52, 82%, 52%, 1) 0%,
+		rgb(254, 73, 2) 50%,
+		rgb(255, 46, 43) 100%
+	);
+	--dark-background: #1b222b;
+	/* --light-background: #1b222b; */
+	--light-background: #eeeeee;
+	--text-light: #eeeeee;
+	--text-dark: rgba(0, 0, 0, 0.9);
+	--apple-font: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Oxygen,
+		Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+	--helv-font: "Helvetica Neue", "Poppins", Roboto, BlinkMacSystemFont,
+		-apple-system, Oxygen, Ubuntu, Cantarell, "Open Sans", sans-serif;
+}
+
+/* Text Styles */
+.cursive {
+	font-family: var(--apple-font);
+	font-weight: 600;
+}
+.aesthetic {
+	font-family: var(---helv-font);
+	color: var(--text-light);
+}
+/*  */
+/*  */
+
+/* Themes */
+.dark-theme {
+	font-family: var(---helv-font);
+	color: var(--text-light);
+	background-color: var(--dark-background);
+}
+.light-theme {
+	font-family: var(---helv-font);
+	color: var(--text-dark);
+	background-color: var(--light-background);
+}
+/*  */
+/*  */
+
+.title-style {
+	color: var(--text-light);
+	font-family: var(--helv-font);
+	font-size: 4em;
+	font-weight: 600;
+	letter-spacing: 1px;
+	text-align: left;
+}
+.project-style {
+	font-family: var(--helv-font);
+	font-size: 2em;
+	font-weight: 600;
+	letter-spacing: 1px;
+	text-align: left;
+	color: var(--text-dark);
+}
+
+.blog-style {
+	font-family: var(--helv-font);
+	font-size: 2em;
+	font-weight: 600;
+	letter-spacing: 1px;
+	text-align: left;
+	background-color: var(--dark-background);
+	color: var(--text-light);
+}
+.tag-style {
+	font-family: var(--helv-font);
+	background: var(--gradiant-color);
+	color: var(--dark-background);
+	/* font-size: 1rem; */
+	font-weight: 700;
+	line-height: 1.5rem;
+	text-align: left;
+	letter-spacing: 1px;
+}
+.gradiant-style {
+	font-family: var(--helv-font);
+	font-size: 1em;
+	letter-spacing: 1px;
+	background: var(--gradiant-color);
+	background-clip: text;
+	text-align: left;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.border-style {
+	border-left: 4px solid var(--light-background);
+	margin: 1rem 0 0 0.5rem 0;
+}
+/*  */
+/*  */
+/*  */
+.prose img {
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 5px;
+}
+
+.home-name {
+	font-size: 150px;
+}

@@ -15,7 +15,10 @@ export default function Post () {
                     url
                 },
                 alt
-            }
+            },
+            date,
+            description,
+            tags
         }`)
         .then((data) => setPost(data))
         .catch(console.error);
@@ -24,13 +27,12 @@ export default function Post () {
     if(!postData) return <div className="bg-gray-900 text-gray-100 w-full h-full absolute flex justify-center">Loading...</div>;
 
     return (
-        <main className="bg-gray-800 min-h-screen p-12">
+        <main className="dark-theme min-h-screen p-12">
             <section className="container mx-auto">
-                <h1 className="text-5xl text-red-500 flex justify-center cursive">Red Pill</h1>
-                <h2 className="text-base text-white font-semibold flex justify-center pt-6 mb-2 text-center">- Articles, Guides & bits of Knowledge written by me -</h2>
-                <h2 className="text-base text-center text-red-500 flex justify-center mb-8"> "You take the red pill...you stay in Wonderland, and I show you how deep the rabbit hole goes." - Morpheus</h2>
+                <h1 className="title-style popout-effect inline-block text-5xl text-left font-semibold pt-6 mb-2 ">Articles</h1>
+                {/* <h2 className="border-style aesthetic text-lg text-left rounded-l mb-12 mt-4 px-2"><blockquote> "You take the <b className="text-red-600">red pill</b>...you stay in Wonderland, and I show you how deep the rabbit hole goes." - Morpheus</blockquote></h2> */}
                 
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="grid md:grid-cols-flow lg:grid-cols-2 gap-12">
                     
                     {/* mapping over all the data that is clickable */}
                     { postData && postData.map((post, index) => (
@@ -38,24 +40,39 @@ export default function Post () {
                         <Link 
                             to={"/post/" + post.slug.current} 
                             key={post.slug.current}
-                        >
-                            <span 
-                                className="block h-64 relative rounded shadow leading-snug bg-white border-l-8 border-red-500" 
+                        > 
+                            <section
+                                className=" border-style block h-auto relative shadow-lg leading-snug px-2 rounded-l" 
                                 key={index}
-                            >
-                                <img 
-                                    src={post.mainImage.asset.url} 
-                                    alt={post.mainImage.alt} 
-                                    className="w-full h-full rounded-r object-cover absolute"
-                                />
-                                <span 
-                                    className="block relative h-full flex justify-end items-end pr-4 pb-4"
-                                >
-                                    <h3 className="text-gray-800 text-lg font-bold px-3 py-4 bg-blue-400 text-red-100 bg-opacity-75 rounded">
-                                        {post.title} 
-                                    </h3>
+                            >   
+                                <div className="tag-style text-sm leading-relaxed inline-block relative h-auto w-auto mr-3 px-4 rounded-r">
+                                    <p>{post.tags}</p>
+                                </div>
+
+                                <span>
+                                    <strong className="text-xs text-gray-600">
+                                    {new Date(post.date).toLocaleDateString()} 
+                                    </strong>
                                 </span>
-                            </span>
+
+                                <div className="inline relative">
+                                    <img 
+                                        src={post.mainImage.asset.url} 
+                                        alt={post.mainImage.alt} 
+                                        className="object-cover max-h-24 w-full mt-2 rounded"
+                                    />
+                                </div>
+
+                                <h3 className="blog-style text-center inline-block relative pt-2 pb-2 mb-5 border-b-2">
+                                        {post.title} 
+                                </h3>
+
+                                <p className="pb-6 text-base text-white leading-relaxed max-h-36 overflow-y-auto">
+                                    {post.description}
+                                </p>
+
+                                <button className="tag-style font-extrabold leading-relaxed relative inline-block rounded-r mr-3 mb-3 px-4">Read More > </button>
+                            </section>
                         </Link>
                     </article>
                     ))}

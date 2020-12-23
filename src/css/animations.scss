@@ -1,0 +1,153 @@
+.container-home {
+	background: hsla(0, 0%, 80%, 1);
+	background: linear-gradient(
+		hsla(0, 0%, 80%, 1) 0%,
+		hsla(230, 100%, 36%, 1) 100%
+	);
+	background: -moz-linear-gradient(
+		hsla(0, 0%, 80%, 1) 0%,
+		hsla(230, 100%, 36%, 1) 100%
+	);
+	background: -webkit-linear-gradient(
+		hsla(0, 0%, 80%, 1) 0%,
+		hsla(230, 100%, 36%, 1) 100%
+	);
+	height: 100vh;
+	width: 100vw;
+	margin: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.container-heading {
+	font-size: 166px;
+	clip-path: inset(0 0 0 0);
+	color: white;
+}
+
+#img-profile {
+	background-image: url(../images/profile.png);
+	background-size: cover;
+	height: 100px;
+	width: 100px;
+	padding: 0;
+	margin: auto;
+	border-radius: 50%;
+	border: 3px solid rgb(255, 255, 255);
+}
+.container-glass {
+	background: rgba(255, 255, 255, 0.233);
+	padding-top: 2em;
+	display: inline-block;
+	position: relative;
+	width: auto;
+	max-width: 400px;
+	text-align: center;
+	border-radius: 3em;
+	z-index: 1;
+	// the code below is what primarily creates the Effect Glassmorphism
+	backdrop-filter: blur(5px);
+	background-clip: padding-box;
+	box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.3);
+	z-index: 1;
+
+	h2 {
+		font-size: 2.9em;
+		margin: 0 10px;
+	}
+	p {
+		margin: 5px 0px;
+		line-height: 21px;
+		// font-size: 18px;
+	}
+	.work-status {
+		background-color: #fe4902;
+		color: white;
+		border-radius: 3px;
+		font-size: 14px;
+		font-weight: bold;
+		padding: 3px 7px;
+		// margin: 10px;
+		position: absolute;
+		top: 30px;
+		left: 30px;
+	}
+}
+
+.contact-button {
+	background-color: #fff;
+	border: 1px solid #fff;
+	border-radius: 3px;
+	color: #000;
+	font-family: "Poppins";
+	font-weight: 500;
+	padding: 10px 25px;
+	margin: 10px 0 20px 0;
+}
+.contact-button:hover {
+	background-color: #000;
+	color: #fff;
+}
+
+.card-bottom-section {
+	color: black;
+	text-align: left;
+	padding: 15px;
+
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
+	ul li {
+		backdrop-filter: blur(5px);
+		background-clip: padding-box;
+		border: 1px solid #000;
+		border-radius: 2px;
+		display: inline-block;
+		font-size: 12px;
+		margin: 0 7px 7px 0;
+		padding: 8px;
+	}
+	.social-section {
+		text-align: left;
+		padding: 20px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+#singlePost-card {
+	background: rgba(255, 255, 255, 0.336);
+	padding: 2em 3em;
+	text-align: center;
+	// the code below is what primarily creates the Effect Glassmorphism
+	backdrop-filter: blur(20px);
+	border: solid 2px transparent;
+	border-radius: 10px;
+	background-clip: padding-box;
+	box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.3);
+}
+
+.popout-effect {
+	color: #eeeeee;
+	font-family: bold 52px "Helvetica Neue", Arial, Sans-Serif;
+	text-shadow: 1px 1px #fe4902, 2px 2px #fe4902, 3px 3px #fe4902;
+}
+.popout-effect:hover {
+	color: #eeeeee;
+	position: relative;
+	top: -3px;
+	left: -3px;
+	text-shadow: 1px 1px #fe4902, 2px 2px #fe4902, 3px 3px #fe4902,
+		4px 4px #fe4902, 5px 5px #fe4902, 6px 6px #fe4902;
+}
+.popout {
+	color: #eeeeee;
+	position: relative;
+	top: -3px;
+	left: -3px;
+	text-shadow: 1px 1px #fe4902, 2px 2px #fe4902, 3px 3px #fe4902,
+		4px 4px #fe4902, 5px 5px #fe4902, 6px 6px #fe4902;
+}

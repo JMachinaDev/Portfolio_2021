@@ -7,7 +7,7 @@ export default function NavBar () {
             <div className="container mx-auto flex justify-between">
                 <nav className="flex">
                     <NavLink 
-                        className="inflex-flex items center py-6 px-3 mr-4 text-gray-200 hover:text-gray-800 text-4xl font-bold cursive tracking-widest"
+                        className="popout-effect inflex-flex items center py-6 px-3 mr-4 text-4xl cursive tracking-widest"
                         activeClassName="text-white"
                         to="/" 
                         exact

@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import sanityClient from "../client.js";
 import imageUrlBuilder from "@sanity/image-url";
 import BlockContent from "@sanity/block-content-to-react";
-import '../css/SinglePost.scss';
+import '../css/animations.scss';
 
 const builder = imageUrlBuilder(sanityClient);
 function urlFor(source){
@@ -62,7 +62,7 @@ export default function SinglePost () {
                         style={{height: '400px'}}
                     />
                 </header>
-                <div className="p-10 lg:px-48 py-12 lg:py-20 prose lg:prose-xl max-w-full text-black">
+                <div className="p-10 lg:px-48 py-12 lg:py-20 prose lg:prose-xl max-w-full text-black aesthetic">
                     <BlockContent  
                         blocks={singlePost.body} 
                         projectId="3ftsgi69" 

@@ -32,15 +32,25 @@ export default {
       },
     },
     {
-      name: 'categories',
-      title: 'Categories',
-      type: 'array',
-      of: [{type: 'reference', to: {type: 'category'}}],
+      name: 'date',
+      type: 'date',
     },
     {
-      name: 'publishedAt',
-      title: 'Published at',
-      type: 'datetime',
+      name: 'description',
+      type: 'text',
+      maxLength: 96,
+    },
+    {
+      name: 'tags',
+      type: 'array',
+      of: [
+          {
+              type: 'string',
+          },
+      ],
+      options: {
+          layout: 'tags',
+      },
     },
     {
       name: 'body',
@@ -63,3 +73,11 @@ export default {
     },
   },
 }
+
+// {
+    //   name: 'category',
+    //   type: 'array',
+    //   // maxLength: 24,
+    //   // type: 'array',
+    //   // of: [{type: 'reference', to: {type: 'category'}}],
+    // },

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import sanityClient from '../client.js';
-import  backgroundImage from '../images/backgroundImage.jpg';
+// import  backgroundImage from '../images/backgroundImage.jpg';
 import profileImage from '../images/profileImage.jpg'
 import BlockContent from "@sanity/block-content-to-react"
 
@@ -10,7 +10,6 @@ export default function About () {
 
     useEffect(() =>{
         sanityClient.fetch(`*[_type == "author"]{
-            name,
             bio,
             "authorImage": image.asset-url
         }`)
@@ -23,9 +22,9 @@ export default function About () {
 
     return (
         <main className="relative">
-            <img src={backgroundImage} alt="Mt.Fuji" className="absolute object-cover w-full h-full"/>
+            {/* <img src={backgroundImage} alt="Mt.Fuji" className="absolute object-cover w-full h-full"/> */}
             <div className="p-10 lg:pt-48 container mx-auto relative">
-                <section className="bg-gray-900 rounded-lg shadow-2xl lg:flex p-20">
+                <section className="bg-gray-600 rounded-lg shadow-2xl lg:flex p-20">
                     <img 
                         src={profileImage}
                         className="rounded object-cover w-full h-auto lg:w-3/4 lg:h-64 mr-8"
@@ -34,7 +33,7 @@ export default function About () {
                     <div className="text-lg flex flex-col justify-center">
                         <h1 className="cursive text-6xl text-green-300 mb-4">
                             Hey there. I'm{" "}
-                            <span className="text-green-100">{author.name}</span>
+                            <span className="text-green-100">Josue Mendez</span>
                         </h1>
                         <div className="prose lg:prose-xl text-white">
                         <BlockContent 
