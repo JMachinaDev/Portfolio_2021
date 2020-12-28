@@ -1,43 +1,44 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import "../css/animations.scss";
 
 export default function NavBar () {
     return (
-        <header className="bg-blue-600">
-            <div className="container mx-auto flex justify-between">
+        <header className="dark-theme aesthetic absolute w-full pb-1 z-50">
+            <div className="container mx-auto flex justify-center">
                 <nav className="flex">
                     <NavLink 
-                        className="popout-effect inflex-flex items center py-6 px-3 mr-4 text-4xl cursive tracking-widest"
-                        activeClassName="text-white"
+                        className="aesthetic popout-effect font-bold inflex-flex items center mt-2 mr-4 text-4xl tracking-widest"
+                        activeClassName="popout-nav"
                         to="/" 
                         exact
                     >
                         JM
                     </NavLink>
                     <NavLink 
-                        className="inline-flex items-center py-3 px-3 my-6 rounded text-gray-200 hover:text-gray-800 cursive"
-                        activeClassName="text-gray-900 bg-blue-200 hover:text-red-600"
+                        className="popout-effect font-semibold inflex-flex items center text-xl mt-4 mr-4"
+                        activeClassName="popout-nav"
                         to="/post">
-                        Red Pill
+                        Blog
                     </NavLink>
                     <NavLink 
-                        className="inline-flex items-center py-3 px-3 my-6 rounded text-gray-200 hover:text-gray-800 cursive"
-                        activeClassName="text-gray-900 bg-blue-200 hover:text-red-600"
+                        className="popout-effect font-semibold inflex-flex items center text-xl mt-4 mr-4"
+                        activeClassName="popout-nav"
                         to="/project">
                         Projects
                     </NavLink>
                     <NavLink 
-                        className="inline-flex items-center py-3 px-3 my-6 rounded text-gray-200 hover:text-gray-800 cursive"
-                        activeClassName="text-gray-900 bg-blue-200 hover:text-red-600"
+                        className="popout-effect font-semibold inflex-flex items center text-xl mt-4 mr-4"
+                        activeClassName="popout-nav"
                         to="/about">
                         About Me
                     </NavLink>
-                    <NavLink 
-                        className="inline-flex items-center py-3 px-3 my-6 rounded text-gray-200 hover:text-gray-800 cursive"
-                        activeClassName="text-gray-900 bg-blue-200 hover:text-red-600"
+                    {/* <NavLink 
+                        className="popout-effect-nav inflex-flex items center text-xl mt-4 mr-4"
+                        // activeClassName="popout-nav"
                         to="/contact">
                         Contact
-                    </NavLink>
+                    </NavLink> */}
                 </nav>
             </div>
         </header>

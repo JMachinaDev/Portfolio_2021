@@ -29,13 +29,15 @@ export default function Project () {
     return (
         <main className="dark-theme min-h-screen p-12">
             <section className="container mx-auto aesthetic">
-                <h1 className="title-style popout flex justify-center mb-12">Web Apps</h1>
-                <section className="grid md:grid-cols-2 lg:grid-cols-flow gap-8 ">
+                <h1 className="title-style popout-effect inline-block text-5xl text-left font-semibold pt-6 mb-12 mt-12">Web Apps</h1>
+                <section className="grid md:grid-cols-2 lg:grid-cols-flow gap-6 ">
 
                     {/* mapping over all the data that is clickable */}
                     {projectData && projectData.map((project, index) => (
-                    <article className="light-theme relative rounded-lg shadow-xl p-8 h-auto w-auto">
-                        <h3 className="project-style text-center block relative px-1 pt-2 pb-3 hover:text-red-500">
+                    <article className="med-theme border-style relative rounded shadow-xl p-4 h-auto w-auto">
+                        {/* <h3 className="blog-style text-center block relative px-1 pt-2 pb-3"> */}
+                        <h3 className="gradiant-blue inline-block text-3xl h-auto w-auto mb-3 py-2 px-4 rounded">
+
                             <a
                                 href={project.link}
                                 alt={project.title}
@@ -47,24 +49,24 @@ export default function Project () {
                         <img 
                             src={project.mainImage.asset.url} 
                             alt={project.mainImage.alt} 
-                            // className="min-h-screen"
+                            className="rounded"
                         />
-                        <section className="text-gray-500 text-xs space-x-2">
+                        <section className="text-gray-500 text-xs ">
                             <span>
                                 <strong className="font-bold">Posted on</strong>:{" "}
                                 {new Date(project.date).toLocaleDateString()} 
                             </span>
                             <span>
-                                <strong className="font-bold">Type</strong>:{" "}
+                                <strong className="font-bold pl-2">Type</strong>:{" "}
                                 {project.projectType}
                             </span>
-                            <p className="my-6 text-lg font-semibold text-gray-900 leading-relaxed max-h-36 overflow-y-auto">
+                            <p className="aesthetic text-base mb-6 mt-6 leading-relaxed max-h-36 overflow-y-auto">
                                 {project.description}
                             </p>
-                            <a href={project.link} rel="noopener noreferrer" target="_blank" className="text-red-500 text-sm font-bold hover:underline hover:text-gray-900">
-                                Live Demo{" "}
+                            <a href={project.link} rel="noopener noreferrer" target="_blank" className="contact-button">
+                                Live Demo >{" "}
                             </a>
-                            <p>
+                            <p className="pt-4 pb-4">
                                 {project.tags}
                             </p>
                         </section>

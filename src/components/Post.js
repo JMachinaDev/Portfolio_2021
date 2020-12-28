@@ -29,7 +29,7 @@ export default function Post () {
     return (
         <main className="dark-theme min-h-screen p-12">
             <section className="container mx-auto">
-                <h1 className="title-style popout-effect inline-block text-5xl text-left font-semibold pt-6 mb-2 ">Articles</h1>
+                <h1 className="title-style popout-effect inline-block text-5xl text-left font-semibold pt-6 mb-12 mt-12">Articles</h1>
                 {/* <h2 className="border-style aesthetic text-lg text-left rounded-l mb-12 mt-4 px-2"><blockquote> "You take the <b className="text-red-600">red pill</b>...you stay in Wonderland, and I show you how deep the rabbit hole goes." - Morpheus</blockquote></h2> */}
                 
                 <div className="grid md:grid-cols-flow lg:grid-cols-2 gap-12">
@@ -42,10 +42,10 @@ export default function Post () {
                             key={post.slug.current}
                         > 
                             <section
-                                className=" border-style block h-auto relative shadow-lg leading-snug px-2 rounded-l" 
+                                className="med-theme border-style block h-auto relative shadow-xl leading-snug p-4 rounded" 
                                 key={index}
                             >   
-                                <div className="tag-style text-sm leading-relaxed inline-block relative h-auto w-auto mr-3 px-4 rounded-r">
+                                <div className="gradiant-blue inline-block relative h-auto w-auto mr-3 px-4 rounded">
                                     <p>{post.tags}</p>
                                 </div>
 
@@ -55,23 +55,25 @@ export default function Post () {
                                     </strong>
                                 </span>
 
+                                <h3 className="blog-style text-center block relative pt-2">
+                                        {post.title} 
+                                </h3>
+
                                 <div className="inline relative">
                                     <img 
                                         src={post.mainImage.asset.url} 
                                         alt={post.mainImage.alt} 
-                                        className="object-cover max-h-24 w-full mt-2 rounded"
+                                        className="object-cover max-h-24 w-full mt-2 mb-4 rounded"
                                     />
                                 </div>
 
-                                <h3 className="blog-style text-center inline-block relative pt-2 pb-2 mb-5 border-b-2">
-                                        {post.title} 
-                                </h3>
+                                
 
                                 <p className="pb-6 text-base text-white leading-relaxed max-h-36 overflow-y-auto">
                                     {post.description}
                                 </p>
-
-                                <button className="tag-style font-extrabold leading-relaxed relative inline-block rounded-r mr-3 mb-3 px-4">Read More > </button>
+                                {/* aesthetic popout-effect leading-relaxed relative inline-block font-semibold text-xl mt-1 */}
+                                <button className="contact-button">Read More > </button>
                             </section>
                         </Link>
                     </article>

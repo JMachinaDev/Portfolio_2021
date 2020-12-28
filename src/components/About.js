@@ -21,26 +21,32 @@ export default function About () {
     
 
     return (
-        <main className="relative">
-            {/* <img src={backgroundImage} alt="Mt.Fuji" className="absolute object-cover w-full h-full"/> */}
-            <div className="p-10 lg:pt-48 container mx-auto relative">
-                <section className="bg-gray-600 rounded-lg shadow-2xl lg:flex p-20">
-                    <img 
-                        src={profileImage}
-                        className="rounded object-cover w-full h-auto lg:w-3/4 lg:h-64 mr-8"
-                        alt={author.name}
-                    />
-                    <div className="text-lg flex flex-col justify-center">
-                        <h1 className="cursive text-6xl text-green-300 mb-4">
-                            Hey there. I'm{" "}
-                            <span className="text-green-100">Josue Mendez</span>
-                        </h1>
-                        <div className="prose lg:prose-xl text-white">
-                        <BlockContent 
-                            blocks={author.bio}
-                            projectId="3ftsgi69"
-                            dataset="production"
+        <main className="aesthetic dark-theme absolute w-full h-full">
+            <div className="p-10 container mx-auto relative">
+                <section className="med-theme rounded-lg shadow-2xl p-8">
+
+                    <h1 className="text-6xl font-bold mb-4">
+                        Hey there. I'm{" "}
+                        <span className="text-blue">Josue Mendez</span>
+                    </h1>
+
+                    <div className="inline relative">
+                        <img 
+                            src={profileImage}
+                            className="object-cover max-h-72 w-full mt-2 mb-4 rounded"
+                            // object-cover w-full h-auto lg:w-3/4 lg:h-64 mr-8
+                            alt={author.name}
                         />
+                    </div>
+
+                    <div className="text-lg flex flex-col justify-center">
+                        
+                        <div className="text-base font-semibold text-gray-300 prose lg:prose-xl">
+                            <BlockContent 
+                                blocks={author.bio}
+                                projectId="3ftsgi69"
+                                dataset="production"
+                            />
                         </div>
                     </div>
                 </section>

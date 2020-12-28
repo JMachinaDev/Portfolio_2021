@@ -1,8 +1,5 @@
 .container-home {
-  background: #cccccc;
-  background: -webkit-gradient(linear, left top, left bottom, from(#cccccc), to(#001fb8));
-  background: linear-gradient(#cccccc 0%, #001fb8 100%);
-  background: -webkit-linear-gradient(#cccccc 0%, #001fb8 100%);
+  background: #1b222b;
   height: 100vh;
   width: 100vw;
   margin: 0;
@@ -15,13 +12,61 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  z-index: -10;
+}
+
+.gradient-circle-one {
+  background: #ff0f7b;
+  background: -webkit-gradient(linear, left top, right top, from(#ff0f7b), to(#f89c2a));
+  background: linear-gradient(90deg, #ff0f7b 0%, #f89c2a 100%);
+  background: -webkit-linear-gradient(90deg, #ff0f7b 0%, #f89c2a 100%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  top: 55%;
+  right: 50%;
+  border-radius: 50%;
+  height: 250px;
+  width: 250px;
+  z-index: 1;
+}
+
+.gradient-circle-two {
+  background: #42caff;
+  background: -webkit-gradient(linear, left top, right top, from(#42caff), to(#e81aff));
+  background: linear-gradient(90deg, #42caff 0%, #e81aff 100%);
+  background: -webkit-linear-gradient(90deg, #42caff 0%, #e81aff 100%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  top: 18%;
+  left: 50%;
+  border-radius: 50%;
+  height: 300px;
+  width: 300px;
+  z-index: 3;
 }
 
 .container-heading {
-  font-size: 166px;
+  font-size: 14rem;
   -webkit-clip-path: inset(0 0 0 0);
           clip-path: inset(0 0 0 0);
-  color: white;
+  color: #eeeeee;
+  z-index: 2;
+}
+
+@media only screen and (max-width: 982px) {
+  .container-heading {
+    font-size: 10rem;
+  }
+}
+
+@media only screen and (max-width: 622px) {
+  .container-heading {
+    font-size: 98px;
+  }
 }
 
 #img-profile {
@@ -36,21 +81,33 @@
 }
 
 .container-glass {
-  background: rgba(255, 255, 255, 0.233);
-  padding-top: 2em;
-  display: inline-block;
+  background: rgba(255, 255, 255, 0.03);
+  padding-top: 3em;
+  margin-top: 5em;
   position: relative;
-  width: auto;
   max-width: 400px;
   text-align: center;
   border-radius: 3em;
-  z-index: 1;
   -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
   background-clip: padding-box;
-  -webkit-box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.3);
-          box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.3);
-  z-index: 1;
+  -webkit-box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.1);
+          box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.1);
+  z-index: 3;
+}
+
+.container-glass .work-status {
+  background-color: #5f7fff;
+  border: 1px solid #fff;
+  color: #1b222b;
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 3px 7px;
+  display: inline-block;
+  position: absolute;
+  top: 30px;
+  left: 30px;
 }
 
 .container-glass h2 {
@@ -59,42 +116,43 @@
 }
 
 .container-glass p {
-  margin: 5px 0px;
+  margin: 5px 0 30px 0;
   line-height: 21px;
 }
 
-.container-glass .work-status {
-  background-color: #fe4902;
-  color: white;
-  border-radius: 3px;
-  font-size: 14px;
-  font-weight: bold;
-  padding: 3px 7px;
-  position: absolute;
-  top: 30px;
-  left: 30px;
+.card-top-section {
+  font-size: larger;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 .contact-button {
-  background-color: #fff;
+  background-color: #5f7fff;
+  color: #1b222b;
   border: 1px solid #fff;
   border-radius: 3px;
-  color: #000;
   font-family: "Poppins";
-  font-weight: 500;
-  padding: 10px 25px;
-  margin: 10px 0 20px 0;
+  font-weight: 700;
+  padding: 6px 25px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .contact-button:hover {
-  background-color: #000;
-  color: #fff;
+  color: #eeeeee;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  text-shadow: 1px 1px #fe7302, 2px 2px #fe7302, 3px 3px #fe7302, 4px 4px #fe7302, 5px 5px #fe7302, 6px 6px #fe7302;
 }
 
 .card-bottom-section {
-  color: black;
+  color: #eeeeee;
   text-align: left;
-  padding: 15px;
+  padding: 12px;
+}
+
+.card-bottom-section h6 {
+  color: #1b222b;
 }
 
 .card-bottom-section ul {
@@ -104,20 +162,19 @@
 }
 
 .card-bottom-section ul li {
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
-  background-clip: padding-box;
-  border: 1px solid #000;
-  border-radius: 2px;
+  color: #1b222b;
+  background-color: #eeeeee;
+  border: 2px solid #1b222b;
+  border-radius: 4px;
   display: inline-block;
   font-size: 12px;
+  font-weight: 600;
   margin: 0 7px 7px 0;
   padding: 8px;
 }
 
 .card-bottom-section .social-section {
-  text-align: left;
-  padding: 20px;
+  padding: 12px 0 12px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -127,25 +184,24 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  gap: 22px;
 }
 
-#singlePost-card {
-  background: rgba(255, 255, 255, 0.336);
-  padding: 2em 3em;
-  text-align: center;
-  -webkit-backdrop-filter: blur(20px);
-          backdrop-filter: blur(20px);
-  border: solid 2px transparent;
-  border-radius: 10px;
-  background-clip: padding-box;
-  -webkit-box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.3);
-          box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.3);
+.card-bottom-section .buy-coffee {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 12px;
 }
 
 .popout-effect {
-  color: #eeeeee;
-  font-family: bold 52px "Helvetica Neue", Arial, Sans-Serif;
-  text-shadow: 1px 1px #fe4902, 2px 2px #fe4902, 3px 3px #fe4902;
+  text-shadow: 1px 1px var(--blue-background), 2px 2px var(--blue-background), 3px 3px var(--blue-background);
 }
 
 .popout-effect:hover {
@@ -153,7 +209,7 @@
   position: relative;
   top: -3px;
   left: -3px;
-  text-shadow: 1px 1px #fe4902, 2px 2px #fe4902, 3px 3px #fe4902, 4px 4px #fe4902, 5px 5px #fe4902, 6px 6px #fe4902;
+  text-shadow: 1px 1px #fe7302, 2px 2px #fe7302, 3px 3px #fe7302, 4px 4px #fe7302, 5px 5px #fe7302, 6px 6px #fe7302;
 }
 
 .popout {
@@ -161,6 +217,22 @@
   position: relative;
   top: -3px;
   left: -3px;
-  text-shadow: 1px 1px #fe4902, 2px 2px #fe4902, 3px 3px #fe4902, 4px 4px #fe4902, 5px 5px #fe4902, 6px 6px #fe4902;
+  text-shadow: 1px 1px #fe7302, 2px 2px #fe7302, 3px 3px #fe7302, 4px 4px #fe7302, 5px 5px #fe7302, 6px 6px #fe7302;
+}
+
+.popout-effect-nav:hover {
+  color: #eeeeee;
+  position: relative;
+  top: -2px;
+  left: -2px;
+  text-shadow: 1px 1px #fe7302, 2px 2px #fe7302, 3px 3px #fe7302, 4px 4px #fe7302, 5px 5px #fe7302, 6px 6px #fe7302;
+}
+
+.popout-nav {
+  color: #eeeeee;
+  position: relative;
+  top: -2px;
+  left: -2px;
+  text-shadow: 1px 1px #fe7302, 2px 2px #fe7302, 3px 3px #fe7302, 4px 4px #fe7302, 5px 5px #fe7302, 6px 6px #fe7302;
 }
 /*# sourceMappingURL=animations.css.map */

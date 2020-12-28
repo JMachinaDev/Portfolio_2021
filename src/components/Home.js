@@ -2,93 +2,98 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { SocialIcon } from 'react-social-icons';
 import "../css/animations.scss";
-import gsap from "gsap";
-// import  Profile  from '../images/profile.jpg'
-// import { Icon }  from 'svg-react-loader?name=Icon!...';
+import { gsap } from "gsap";
 
 export default function Home () {
 
     useEffect (() => {
         const timeline = gsap.timeline({defaults: {ease: 'power2.inOut', duration: 1.8}})
 
-        timeline.from('.img-glass', {x: '-50%', opacity: 0})
-            .from('.container-glass', {opacity: 0, delay: .5, duration: 1}, "-=1.5")
-            .from('.container-glass', {x: '-20%', backdropFilter: 'blur(0px)'})
+        timeline.from('.container-heading', {y: '-30%', opacity: 0})
+            .from('.container-heading', { clipPath: 'inset(0 0 100% 0)'}, "-=1.5")
+            .from('#animation', {opacity: 0, delay: .5, duration: 1}, "-=.1")
+            .from('#animation', {x: '-30%', backdropFilter: 'blur(0px)'})
             .from('.seq', {y: -30, opacity: 0, stagger: .2, duration: .5}, "-=.5")
-            .from('.container-heading', {y: 30, clipPath: 'inset(0 0 100% 0)'}, "-=.8")
-
     })
 
     return (
-    <div className="container-home object-cover w-full h-full">
+    <div className="aesthetic container-home">
         
-        <header className="flex absolute justify-center items-center cursive">
+        <header className="flex absolute justify-center items-center font-semibold ">
                 <h1 className='container-heading'>Welcome.</h1>
         </header>
 
-        <main className="aesthetic">
-            <section className="container-glass" id='glass'>
-                <Link to="/contact">
-                    <span className="work-status seq">Open for work</span>
-                </Link>
+        <div className="gradient-circle-one" id="animation"></div>
+        <div className="gradient-circle-two" id="animation"></div>
+
+
+        <main>
+            <section className="container-glass" id='animation'>
                 
+                <span className="work-status seq">Open For Work</span>
                 <img id="img-profile" alt=""/>
 
-                <section className="aesthetic card-top-section seq">
+                <section className="card-top-section seq font-semibold">
                     <h2>I'm Josue.</h2>
-                    <p className="text-lg text-green-200">Front End Web Developer</p>
-                    <p className="text-gray-800 text-xs">Elkhart, Indiana</p>
+                    <p className="text-lg">Front End Web Developer</p>
 
                     <Link to="/contact"> 
-                        <button class="contact-button">Message</button>
+                        <button className="contact-button mt-2">Message</button>
                     </Link>
                 </section>
 
-                <section className="card-bottom-section seq cursive">
-                    <h6><b>Front End Skills</b></h6>
+                <section className="card-bottom-section seq mt-4">
+                    <h6 className="font-bold text-lg">Front End Skills</h6>
                     <ul>
-                        <li>React</li>
-                        <li>JavaScript</li>
-                        <li>Node</li>
                         <li>HTML</li>
                         <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>Node</li>
+                        <li>React</li>
                         <li>Responsive Web Design</li>
-                        <li>React BootStrap</li>
-                        <li>JQuery</li>
+                        <li>Headless CMS</li>
+                        <li>SEO</li>
                         <li>Sass</li>
                         <li>Tailwind</li>
+                        <li>React BootStrap</li>
+                        <li>JQuery</li>
                     </ul>
                 
                     <div className="social-section">
                         <SocialIcon 
                             url="https://www.linkedin.com/in/josue-mendez-0a78611ba/"
                             target="_blank"
-                            className="mr-4"
-                            fgColor="#fff"
+                            fgColor="#eeeeee"
                             style={{ height: 45, width: 45}}
                         />
                         <SocialIcon 
                             url="https://github.com/JMachinaDev"
                             target="_blank"
-                            className="mr-4"
-                            fgColor="#fff"
+                            fgColor="#eeeeee"
                             style={{ height: 45, width: 45}}
                         />
                         <SocialIcon 
                             url="https://twitter.com/JMachinaDev"
                             target="_blank"
-                            className="mr-4"
-                            fgColor="#fff"
+                            fgColor="#eeeeee"
                             style={{ height: 45, width: 45}}
                         />
                         <SocialIcon 
                             url="mailto:jmachinadev@gmail.com"
                             target="_blank"
-                            className="mr-4"
-                            fgColor="#fff"
+                            fgColor="#eeeeee"
                             style={{ height: 45, width: 45}}
                         />
                     </div>
+            
+                        <a className="buy-coffee" href="https://www.buymeacoffee.com/jmachinadev" target="_blank" rel="noreferrer">
+                            <img 
+                                src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=jmachinadev&button_colour=5F7FFF&font_colour=1b222b&font_family=Poppins&outline_colour=000000&coffee_colour=FFDD00"
+                                alt="Coffee Button"
+                            />
+                        </a>
+                  
+
                 </section>
             </section>
         </main>
