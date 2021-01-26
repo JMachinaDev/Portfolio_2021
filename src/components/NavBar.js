@@ -30,6 +30,12 @@ export default function NavBar () {
                     <NavLink 
                         className="popout-effect font-semibold inflex-flex items center text-xl mt-4 mr-4"
                         activeClassName="popout-nav"
+                        to="/postTasks">
+                        TaskBoard
+                    </NavLink>
+                    <NavLink 
+                        className="popout-effect font-semibold inflex-flex items center text-xl mt-4 mr-4"
+                        activeClassName="popout-nav"
                         to="/about">
                         About Me
                     </NavLink>

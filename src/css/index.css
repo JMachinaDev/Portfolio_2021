@@ -41,8 +41,6 @@
 .text-blue {
 	color: var(--blue-background);
 }
-/*  */
-/*  */
 
 /* Themes */
 .dark-theme {
@@ -54,6 +52,7 @@
 .light-theme {
 	background-color: var(--light-background);
 }
+
 /*  */
 /*  */
 
@@ -73,7 +72,6 @@
 	text-align: left;
 	color: var(--text-dark);
 }
-
 .blog-style {
 	font-family: var(--helv-font);
 	font-size: 2em;
@@ -103,16 +101,20 @@
 .border-style {
 	border-left: 4px solid var(--light-background);
 }
-
-/*  */
-/*  */
-/*  */
 .prose img {
 	margin-left: auto;
 	margin-right: auto;
 	border-radius: 5px;
 }
-
 .home-name {
 	font-size: 150px;
+}
+.task-container > main:nth-child(odd) {
+	border-radius: 10px;
+	padding: 8px;
+}
+.task-container > main:nth-child(even) {
+	background-color: var(--dark-background);
+	border-radius: 10px;
+	padding: 8px;
 }
