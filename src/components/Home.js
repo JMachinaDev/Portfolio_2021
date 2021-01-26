@@ -4,6 +4,8 @@ import { SocialIcon } from 'react-social-icons';
 import "../css/animations.scss";
 import { gsap } from "gsap";
 
+// TODO: convert skills to array and map
+
 export default function Home () {
 
     useEffect (() => {
@@ -63,13 +65,13 @@ export default function Home () {
                         <SocialIcon 
                             url="https://www.linkedin.com/in/josue-mendez-0a78611ba/"
                             target="_blank"
-                            fgColor="#eeeeee"
+                            // fgColor="#eeeeee"
                             style={{ height: 45, width: 45}}
                         />
                         <SocialIcon 
                             url="https://github.com/JMachinaDev"
                             target="_blank"
-                            fgColor="#eeeeee"
+                            // fgColor="#eeeeee"
                             style={{ height: 45, width: 45}}
                         />
                         <SocialIcon 
