@@ -5,8 +5,7 @@ export class Client {
     this.client = sanityClient;
   }
 
-  // TODO: add other fetch types here, and call them in thier respective files
-  fetchData = () => {
+  listTasks = () => {
     return this.client
     .fetch(
       `*[_type == "task"]{
@@ -19,4 +18,42 @@ export class Client {
       'authorImage': author->image,
     }`);
   }
-}
+
+  listProjects = () => {
+    return this.client
+    .fetch(`*[_type == "project"]{
+      title,
+      mainImage{
+        asset->{
+          _id,
+          url
+        },
+        alt
+      },
+      date,
+      projectType,
+      description,
+      link,
+      tags
+    }`);
+  }
+
+  listBlogPosts = () => {
+    return this.client
+    .fetch(`*[_type == "post"]{
+      title,
+      slug,
+      mainImage{
+        asset->{
+          _id,
+          url
+        },
+        alt
+      },
+      date,
+      description,
+      tags
+    }`);
+  }
+
+};
