@@ -8,11 +8,13 @@ const PostTasks = () => {
 
   const initializeData = () => {
     const client = new Client();
-    client.fetchData()
+    client.listTasks()
       .then((data) => setPost(data))
       .catch(console.error);
   };
   useEffect(initializeData, []);
+
+  if(!postData) return <div className="bg-gray-900 text-gray-100 w-full h-full absolute flex justify-center">Loading...</div>;
 
   return (
     <div className="dark-theme min-h-screen p-12">
