@@ -5,6 +5,7 @@ import sanityClient from "../client.js";
 export default function Project () {
     const [projectData, setProjectData] = useState(null)
 
+    // TODO: move fetch/project to fetchClient
     useEffect(() => {
         sanityClient.fetch(`*[_type == "project"]{
             title,
@@ -64,16 +65,15 @@ export default function Project () {
                                 {project.description}
                             </p>
                             <a href={project.link} rel="noopener noreferrer" target="_blank" className="contact-button">
-                                Live Demo >{" "}
+                                Live Demo &gt;{" "}
                             </a>
                             <p className="pt-4 pb-4">
-                                {project.tags}
+                                {project.tags.join('/ ')}
                             </p>
                         </section>
                     </article>
                     ))}
 
-                
                 </section>
             </section>
         </main>
