@@ -4,11 +4,11 @@ import "../css/animations.scss";
 
 export default function NavBar () {
     return (
-        <header className="dark-theme aesthetic absolute w-full pb-1 z-50">
+        <main className="dark-theme aesthetic absolute w-full pb-1 z-50">
             <div className="container mx-auto flex justify-center">
                 <nav className="flex">
                     <NavLink 
-                        className="aesthetic popout-effect font-bold inflex-flex items center mt-2 mr-4 text-4xl tracking-widest"
+                        className="aesthetic popout-effect font-bold inflex-flex items center mt-2 mr-4 text-4xl tracking-widest !important"
                         activeClassName="popout-nav"
                         to="/" 
                         exact
@@ -39,14 +39,8 @@ export default function NavBar () {
                         to="/about">
                         About Me
                     </NavLink>
-                    {/* <NavLink 
-                        className="popout-effect-nav inflex-flex items center text-xl mt-4 mr-4"
-                        // activeClassName="popout-nav"
-                        to="/contact">
-                        Contact
-                    </NavLink> */}
                 </nav>
             </div>
-        </header>
+        </main>
     )
 }
