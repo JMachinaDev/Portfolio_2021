@@ -1,0 +1,120 @@
+.modal-backdrop {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1040;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.5);
+	.modal-backdrop .show {
+		opacity: 0;
+	}
+	.modal-backdrop .fade {
+		opacity: 0;
+	}
+}
+
+.fade {
+	-webkit-transition: opacity 0.15s linear;
+	transition: opacity 0.15s linear;
+}
+// .modal-open lays in body , sibling of .modal-content-box &.modal-backdrop
+.modal-open .modal {
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+.modal {
+	position: fixed;
+	z-index: 1050;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+	top: 50%;
+	// border-top: 1px solid white;
+	// border-right: 1px solid white;
+	// border-bottom: 1px solid white;
+	transform: translateY(-50%);
+	overflow: hidden;
+}
+
+/* Actual Modal */
+.modal-content-box {
+	border-radius: 10px;
+	width: 50%;
+	.modal-content {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		// color: black;
+		pointer-events: auto;
+		// background-color: white;
+		background-clip: padding-box;
+		// border: 3px solid black;
+		border-radius: 10px;
+		outline: 0;
+	}
+	.modal-header {
+		display: flex;
+		justify-content: flex-end;
+		padding: auto;
+		font-size: 2rem;
+		margin: 0;
+	}
+	.modal-header .close {
+		margin: 0.5rem 1rem 0 1rem;
+		// font-size: larger;
+		// border: 1px solid black;
+	}
+	.modal-body {
+		position: relative;
+		flex: 1 1 auto;
+		padding: 1rem;
+	}
+}
+
+.modal-form {
+	display: flex;
+	flex-direction: row;
+}
+label {
+	font-size: larger;
+}
+input,
+textarea {
+	width: 100%;
+	padding: 1rem 1.5rem;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+
+.modal-style {
+	font-family: var(--helv-font);
+	font-size: 1em;
+	font-weight: 600;
+	letter-spacing: 1px;
+	text-align: left;
+	color: var(--text-light);
+}
+.submit-button {
+	background-color: #5f7fff;
+	color: #1b222b;
+	border: 1px solid #fff;
+	border-radius: 3px;
+	font-family: "Poppins";
+	font-weight: 700;
+	padding: 6px 25px;
+	box-shadow: none;
+}
+.submit-button:hover {
+	color: #eeeeee;
+	box-shadow: none;
+	text-shadow: 1px 1px #fe7302, 2px 2px #fe7302, 3px 3px #fe7302,
+		4px 4px #fe7302, 5px 5px #fe7302, 6px 6px #fe7302;
+}
