@@ -18,6 +18,9 @@ const PostTasks = () => {
     const client = new Client();
     client.listTasks()
       .then((data) => {
+        while(itemsToSend.length > 0){
+          itemsToSend.pop();
+        }
         itemsToSend.push(...data)
       })
       .catch(console.error);
@@ -32,7 +35,7 @@ const PostTasks = () => {
   if(!postTask) return <div className="bg-gray-900 text-gray-100 w-full h-full absolute flex justify-center">Loading...</div>;
 
   return (
-    <div className="dark-theme min-h-screen p-12">
+    <div className="dark-theme min-h-screen p-10">
       <main className="container mx-auto aesthetic">
         <section className="grid md:grid-cols-2 lg:grid-cols-flow gap-6 pb-12">
 
