@@ -5,8 +5,8 @@ import "../css/animations.scss";
 export default function NavBar () {
   return (
     <main className="dark-theme aesthetic absolute w-full pb-1 z-50">
-      <div className="container mx-auto flex justify-center">
-          <nav className="flex">
+      <div className=" mx-2 flex justify-center">
+        <nav className="navbar-container flex">
           <NavLink 
             className="aesthetic popout-effect font-bold inflex-flex items center mt-1 mr-4 text-4xl tracking-widest"
             activeClassName="popout-nav"
