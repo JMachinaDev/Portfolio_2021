@@ -1,0 +1,63 @@
+ul.pagePagination {
+	display: flex;
+	justify-content: center;
+}
+.pagePagination li {
+	display: inline-block;
+}
+.pagePagination button {
+	display: inline-block;
+}
+.pagePagination {
+	width: 100%;
+	display: inline-block;
+	align-items: center;
+	padding: 0;
+	list-style-type: none;
+}
+.pagePagination button {
+	display: inline-block;
+	padding: 0 20px;
+	vertical-align: middle;
+	line-height: 45px;
+	height: 45px;
+	box-sizing: border-box;
+	border: 1px solid #eeeeee;
+	color: #eeeeee;
+	background-color: #212a35;
+	cursor: pointer;
+	outline: none;
+	font-size: 18px;
+	margin: 0 0 0 -1px;
+	font-weight: 300;
+	transition: all 250ms ease-in;
+}
+.paginationContent {
+	min-height: 100px;
+	margin-top: 50px;
+	font-size: 20px;
+	color: #ffffff;
+}
+
+.paginateButton {
+	line-height: 42px;
+}
+
+.pagePagination button:hover {
+	z-index: 2;
+	color: #1b222b;
+	text-decoration: none;
+	background-color: #eeeeee;
+	border-color: #dee2e6;
+}
+
+.paginateButton:disabled {
+	pointer-events: none;
+}
+
+.pagePagination button.active {
+	color: #eeeeee;
+	background-color: #5f7fff;
+	border: 1px solid #eeeeee;
+	font-size: 20px;
+}

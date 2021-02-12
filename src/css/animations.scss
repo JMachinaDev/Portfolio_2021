@@ -1,194 +1,198 @@
 .container-home {
-	background: #1b222b;
-	height: 100vh;
-	width: 100vw;
-	margin: 0;
-	display: flex;
-	align-items: center;
-	justify-content: center;
 	z-index: -10;
-}
-
-.gradient-circle-one {
-	background: hsla(333, 100%, 53%, 1);
-	background: linear-gradient(
-		90deg,
-		hsla(333, 100%, 53%, 1) 0%,
-		hsla(33, 94%, 57%, 1) 100%
-	);
-	background: -moz-linear-gradient(
-		90deg,
-		hsla(333, 100%, 53%, 1) 0%,
-		hsla(33, 94%, 57%, 1) 100%
-	);
-	background: -webkit-linear-gradient(
-		90deg,
-		hsla(333, 100%, 53%, 1) 0%,
-		hsla(33, 94%, 57%, 1) 100%
-	);
 	display: flex;
-	position: absolute;
-	top: 55%;
-	right: 50%;
-
-	border-radius: 50%;
-	height: 250px;
-	width: 250px;
-	z-index: 1;
+	justify-content: center;
+	align-items: center;
 }
-.gradient-circle-two {
-	background: hsla(197, 100%, 63%, 1);
-	background: linear-gradient(
-		90deg,
-		hsla(197, 100%, 63%, 1) 0%,
-		hsla(294, 100%, 55%, 1) 100%
-	);
-	background: -moz-linear-gradient(
-		90deg,
-		hsla(197, 100%, 63%, 1) 0%,
-		hsla(294, 100%, 55%, 1) 100%
-	);
-	background: -webkit-linear-gradient(
-		90deg,
-		hsla(197, 100%, 63%, 1) 0%,
-		hsla(294, 100%, 55%, 1) 100%
-	);
+.container-home-main {
 	display: flex;
+	justify-content: center;
+	align-items: center;
 	position: absolute;
-	top: 18%;
-	left: 50%;
-	border-radius: 50%;
-	height: 300px;
-	width: 300px;
-	z-index: 3;
-}
+	height: 100vh;
+	// background-color: hsla(33, 94%, 57%, 1);
+	.gradient-circle-one {
+		background: hsla(333, 100%, 53%, 1);
+		background: linear-gradient(
+			90deg,
+			hsla(333, 100%, 53%, 1) 0%,
+			hsla(33, 94%, 57%, 1) 100%
+		);
+		background: -moz-linear-gradient(
+			90deg,
+			hsla(333, 100%, 53%, 1) 0%,
+			hsla(33, 94%, 57%, 1) 100%
+		);
+		background: -webkit-linear-gradient(
+			90deg,
+			hsla(333, 100%, 53%, 1) 0%,
+			hsla(33, 94%, 57%, 1) 100%
+		);
+		// display: flex;
+		position: absolute;
+		top: 15%;
+		left: 50%;
+		border-radius: 50%;
+		height: 300px;
+		width: 300px;
+		z-index: 3;
+	}
+	.gradient-circle-two {
+		background: hsla(197, 100%, 63%, 1);
+		background: linear-gradient(
+			90deg,
+			hsla(197, 100%, 63%, 1) 0%,
+			hsla(294, 100%, 55%, 1) 100%
+		);
+		background: -moz-linear-gradient(
+			90deg,
+			hsla(197, 100%, 63%, 1) 0%,
+			hsla(294, 100%, 55%, 1) 100%
+		);
+		background: -webkit-linear-gradient(
+			90deg,
+			hsla(197, 100%, 63%, 1) 0%,
+			hsla(294, 100%, 55%, 1) 100%
+		);
+		// display: flex;
 
-.container-heading {
-	font-size: 14rem;
-	clip-path: inset(0 0 0 0);
-	color: #eeeeee;
-	z-index: 2;
-}
-@media only screen and (max-width: 982px) {
-	.container-heading {
-		font-size: 10rem;
+		position: absolute;
+		top: 45%;
+		right: 55%;
+		border-radius: 50%;
+		height: 275px;
+		width: 275px;
+		z-index: 1;
+	}
+	.home-heading {
+		text-align: center;
+		font-size: 14rem;
+		clip-path: inset(0 0 0 0);
+		opacity: 1;
+		color: #eeeeee;
+		z-index: 2;
 	}
 }
-@media only screen and (max-width: 622px) {
-	.container-heading {
-		font-size: 98px;
-	}
-}
-
-#img-profile {
-	background-image: url(../images/profile.png);
-	background-size: cover;
-	height: 100px;
-	width: 100px;
-	padding: 0;
-	margin: auto;
-	border-radius: 50%;
-	border: 3px solid rgb(255, 255, 255);
-}
-
 .container-glass {
+	display: grid;
+	grid-template-areas:
+		"top"
+		"bottom";
 	background: rgba(255, 255, 255, 0.03);
-	padding-top: 3em;
-	margin-top: 5em;
-	position: relative;
-	max-width: 400px;
+	padding: 1rem;
+	margin-top: 4rem;
+	margin-bottom: 2rem;
+	width: 475px;
 	text-align: center;
+	font-size: larger;
 	border-radius: 3em;
 	// the code below is what primarily creates the Effect Glassmorphism
 	-webkit-backdrop-filter: blur(5px);
 	backdrop-filter: blur(5px);
 	background-clip: padding-box;
-	box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.1);
-	z-index: 3;
-
-	.work-status {
-		background-color: #5f7fff;
-		border: 1px solid #fff;
-		color: #1b222b;
-		border-radius: 3px;
-		font-size: 14px;
-		font-weight: bold;
-		padding: 3px 7px;
-		display: inline-block;
-		position: absolute;
-		top: 30px;
-		left: 30px;
+	box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.2);
+	z-index: 10;
+	.card-top-section {
+		grid-area: top;
+		#img-profile {
+			background-image: url(../images/profile.png);
+			background-size: cover;
+			height: 100px;
+			width: 100px;
+			padding: 0;
+			margin: auto;
+			border-radius: 50%;
+			border: 3px solid rgb(255, 255, 255);
+			// display: block;
+		}
+		.work-status {
+			background-color: #5f7fff;
+			// border: 1px solid #fff;
+			text-align: center;
+			color: #eeeeee;
+			border-radius: 3px;
+			font-size: 14px;
+			font-weight: bold;
+			padding: 0.3rem;
+			margin-left: 3rem;
+			position: absolute;
+		}
+		.work-status:before {
+			content: "";
+			width: 0px;
+			height: 0px;
+			position: absolute;
+			border-right: 24px solid #5f7fff;
+			border-left: 12px solid transparent;
+			border-top: 12px solid #5f7fff;
+			border-bottom: 20px solid transparent;
+			right: 10px;
+			bottom: -15px;
+			z-index: -2;
+		}
+		.contact-button {
+			background-color: #5f7fff;
+			color: #1b222b;
+			border: 1px solid #fff;
+			border-radius: 3px;
+			font-family: "Poppins";
+			font-weight: 700;
+			padding: 0.5rem 2rem;
+			box-shadow: none;
+		}
+		.contact-button:hover {
+			color: #eeeeee;
+			box-shadow: none;
+			text-shadow: 1px 1px #fe7302, 2px 2px #fe7302, 3px 3px #fe7302,
+				4px 4px #fe7302, 5px 5px #fe7302, 6px 6px #fe7302;
+		}
+		h2 {
+			font-size: 2.9em;
+		}
+		p {
+			margin: 0.5rem 0 1.5rem 0;
+			line-height: 21px;
+		}
 	}
-	h2 {
-		font-size: 2.9em;
-		margin: 0 10px;
-	}
-	p {
-		margin: 5px 0 30px 0;
-		line-height: 21px;
-		// font-size: 18px;
+	.card-bottom-section {
+		grid-area: bottom;
+		text-align: left;
+		padding: 12px;
+		h6 {
+			color: #eeeeee;
+		}
+		ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+		}
+		ul li {
+			color: #1b222b;
+			background-color: #eeeeee;
+			border: 2px solid #1b222b;
+			border-radius: 4px;
+			display: inline-block;
+			font-size: 12px;
+			font-weight: 600;
+			margin: 0.3rem 0.2rem;
+			padding: 8px;
+		}
+		.social-section {
+			padding: 12px 0 12px 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 22px;
+		}
+		.buy-coffee {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin: 12px 0 0 0;
+		}
 	}
 }
 
-.card-top-section {
-	font-size: larger;
-	margin-bottom: 0;
-	padding-bottom: 0;
-}
-.contact-button {
-	background-color: #5f7fff;
-	color: #1b222b;
-	border: 1px solid #fff;
-	border-radius: 3px;
-	font-family: "Poppins";
-	font-weight: 700;
-	padding: 6px 25px;
-	box-shadow: none;
-}
-.contact-button:hover {
-	color: #eeeeee;
-	box-shadow: none;
-	text-shadow: 1px 1px #fe7302, 2px 2px #fe7302, 3px 3px #fe7302,
-		4px 4px #fe7302, 5px 5px #fe7302, 6px 6px #fe7302;
-}
-
-.card-bottom-section {
-	color: #eeeeee;
-	text-align: left;
-	padding: 12px;
-	h6 {
-		color: #1b222b;
-	}
-	ul {
-		list-style-type: none;
-		margin: 0;
-		padding: 0;
-	}
-	ul li {
-		color: #1b222b;
-		background-color: #eeeeee;
-		border: 2px solid #1b222b;
-		border-radius: 4px;
-		display: inline-block;
-		font-size: 12px;
-		font-weight: 600;
-		margin: 0 7px 7px 0;
-		padding: 8px;
-	}
-	.social-section {
-		padding: 12px 0 12px 0;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		gap: 22px;
-	}
-	.buy-coffee {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		margin: 12px;
-	}
-}
 .popout-effect {
 	text-shadow: 1px 1px var(--blue-background), 2px 2px var(--blue-background),
 		3px 3px var(--blue-background);

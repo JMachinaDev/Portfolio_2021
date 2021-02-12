@@ -1,0 +1,15 @@
+.article-header-container {
+	grid-template-areas: "img name";
+	margin: 0 0 3rem 0 !important;
+}
+.article-header-container img {
+	grid-area: img;
+	margin: 0;
+}
+.article-header-container p {
+	grid-area: name;
+	padding-left: 2.5rem !important;
+}
+.article-header {
+	margin-bottom: 0.5rem !important;
+}

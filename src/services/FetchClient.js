@@ -8,7 +8,7 @@ export class Client {
   listTasks = () => {
     return this.client
     .fetch(
-      `*[_type == "task"]{
+      `*[_type == "task"] | order(_createdAt) {
       title,
       slug,
       date,
@@ -40,7 +40,7 @@ export class Client {
 
   listBlogPosts = () => {
     return this.client
-    .fetch(`*[_type == "post"]{
+    .fetch(`*[_type == "post"] | order(_createdAt) {
       title,
       slug,
       mainImage{
@@ -53,6 +53,14 @@ export class Client {
       date,
       description,
       tags
+    }`);
+  }
+
+  fetchAuthor = () => {
+    return this.client
+    .fetch(`*[_type == "author"]{
+      bio,
+      "authorImage": image.asset-url
     }`);
   }
 

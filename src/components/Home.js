@@ -1,102 +1,62 @@
-import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
 import { SocialIcon } from 'react-social-icons';
-import "../css/animations.scss";
 import { gsap } from "gsap";
+import DisplayModal from './contactModal';
+import '../css/contactModalHome.css';
+import "../css/animations.scss";
 
-export default function Home () {
+const skills = ['HTML','CSS','JavaScript','Node.js','React /React Libraries','Responsive Web Design','Headlesss CMS','SEO','Bootstrap','JQuery','CSS Preprocessors/Sass/Tailwind']
 
-    useEffect (() => {
-        const timeline = gsap.timeline({defaults: {ease: 'power2.inOut', duration: 1.8}})
+export default function Home (props) {
+  const [show, setShow] = useState(props.show);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
-        timeline.from('.container-heading', {y: '-30%', opacity: 0})
-            .from('.container-heading', { clipPath: 'inset(0 0 100% 0)'}, "-=1.5")
-            .from('#animation', {opacity: 0, delay: .5, duration: 1}, "-=.1")
-            .from('#animation', {x: '-30%', backdropFilter: 'blur(0px)'})
-            .from('.seq', {y: -30, opacity: 0, stagger: .2, duration: .5}, "-=.5")
-    })
+  useEffect (() => {
+    const timeline = gsap.timeline({defaults: {ease: 'power2.inOut', duration: 1}})
+    timeline.from('.animation', {opacity: 0, delay: 1, duration: 1.5}, "-=.1")
+      .from('#animation1', {x: '-150%', backdropFilter: 'blur(0px)'},)
+      .from('#animation2', {x: '150%', backdropFilter: 'blur(0px)'})
+      .from('#seq', {y: -30, opacity: 0, stagger: .2, duration: 1})
+  })
 
-    return (
-    <div className="aesthetic container-home">
-        
-        <header className="flex absolute justify-center items-center font-semibold ">
-                <h1 className='container-heading'>Welcome.</h1>
-        </header>
-
-        <div className="gradient-circle-one" id="animation"></div>
-        <div className="gradient-circle-two" id="animation"></div>
-
-
-        <main>
-            <section className="container-glass" id='animation'>
-                
-                <span className="work-status seq">Open For Work</span>
-                <img id="img-profile" alt=""/>
-
-                <section className="card-top-section seq font-semibold">
-                    <h2>I'm Josue.</h2>
-                    <p className="text-lg">Front End Web Developer</p>
-
-                    <Link to="/contact"> 
-                        <button className="contact-button mt-2">Message</button>
-                    </Link>
-                </section>
-
-                <section className="card-bottom-section seq mt-4">
-                    <h6 className="font-bold text-lg">Front End Skills</h6>
-                    <ul>
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>JavaScript</li>
-                        <li>Node</li>
-                        <li>React</li>
-                        <li>Responsive Web Design</li>
-                        <li>Headless CMS</li>
-                        <li>SEO</li>
-                        <li>Sass</li>
-                        <li>Tailwind</li>
-                        <li>React BootStrap</li>
-                        <li>JQuery</li>
-                    </ul>
-                
-                    <div className="social-section">
-                        <SocialIcon 
-                            url="https://www.linkedin.com/in/josue-mendez-0a78611ba/"
-                            target="_blank"
-                            fgColor="#eeeeee"
-                            style={{ height: 45, width: 45}}
-                        />
-                        <SocialIcon 
-                            url="https://github.com/JMachinaDev"
-                            target="_blank"
-                            fgColor="#eeeeee"
-                            style={{ height: 45, width: 45}}
-                        />
-                        <SocialIcon 
-                            url="https://twitter.com/JMachinaDev"
-                            target="_blank"
-                            fgColor="#eeeeee"
-                            style={{ height: 45, width: 45}}
-                        />
-                        <SocialIcon 
-                            url="mailto:jmachinadev@gmail.com"
-                            target="_blank"
-                            fgColor="#eeeeee"
-                            style={{ height: 45, width: 45}}
-                        />
-                    </div>
-            
-                        <a className="buy-coffee" href="https://www.buymeacoffee.com/jmachinadev" target="_blank" rel="noreferrer">
-                            <img 
-                                src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=jmachinadev&button_colour=5F7FFF&font_colour=1b222b&font_family=Poppins&outline_colour=000000&coffee_colour=FFDD00"
-                                alt="Coffee Button"
-                            />
-                        </a>
-                  
-
-                </section>
-            </section>
-        </main>
-    </div>
-    )
+  return (
+    <main className="aesthetic container-home">
+      <DisplayModal handleClose={handleClose} handleShow={handleShow} show={show}/>
+      <section className="container-home-main">
+        <div className="gradient-circle-one animation" id="animation1"></div>
+        <div className="gradient-circle-two animation" id="animation2"></div>
+      </section>
+      <section className="container-glass" id='seq'>
+        <section className="card-top-section  font-semibold">
+          <div className="work-status">Open For Work</div>
+          <img id="img-profile" alt=""/>
+          <header>
+            <h2>I'm Josue.</h2>
+          </header>
+          <p className="text-lg">Front End Web Developer</p>
+          <button className="contact-button mt-2" onClick={handleShow}>Message</button>
+        </section>
+        <section className="card-bottom-section mt-4">
+          <header>
+            <h6 className="font-bold text-lg">Front End Skills</h6>
+          </header>
+          <ul>
+            {skills.map((item) => (
+              <li>{item}</li>
+            ))}
+          </ul>
+          <nav className="social-section">
+            <SocialIcon url="https://www.linkedin.com/in/josue-mendez-0a78611ba/" target="_blank" fgColor="#eeeeee" style={{ height: 45, width: 45}} />
+            <SocialIcon url="https://github.com/JMachinaDev" target="_blank" fgColor="#eeeeee" style={{ height: 45, width: 45}} />
+            <SocialIcon url="https://twitter.com/JMachinaDev" target="_blank" fgColor="#eeeeee" style={{ height: 45, width: 45}} />
+            <SocialIcon url="mailto:jmachinadev@gmail.com" target="_blank" fgColor="#eeeeee" style={{ height: 45, width: 45}} />
+          </nav>
+          <a className="buy-coffee" href="https://www.buymeacoffee.com/jmachinadev" target="_blank" rel="noreferrer">
+            <img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=jmachinadev&button_colour=5F7FFF&font_colour=1b222b&font_family=Poppins&outline_colour=1b222b&coffee_colour=FFDD00" alt="Coffee Button"/>
+          </a>
+        </section>
+      </section>
+    </main>
+  )
 }

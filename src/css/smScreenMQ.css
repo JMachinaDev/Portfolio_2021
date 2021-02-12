@@ -1,0 +1,40 @@
+/* NavBar.js */
+@media only screen and (max-width: 622px) {
+	.navbar-container a {
+		margin-right: 4px;
+		margin-left: 4px;
+	}
+}
+/* home.js */
+@media only screen and (max-width: 622px) {
+	.container-glass {
+		max-width: 375px;
+		margin-top: 6rem !important;
+		margin-bottom: 0rem !important;
+	}
+	.work-status {
+		margin: 6px 0 0 2px !important;
+	}
+}
+/* modal */
+@media only screen and (max-width: 622px) {
+	.modal-content-box {
+		width: 75% !important;
+		margin: auto 1rem !important;
+	}
+	.modal-content {
+		width: 100% !important;
+	}
+	.modal-open {
+		overflow: hidden !important;
+	}
+}
+/* about me */
+@media only screen and (max-width: 922px) {
+	.about-container {
+		grid-template-areas:
+			"header"
+			"image"
+			"cont" !important;
+	}
+}
