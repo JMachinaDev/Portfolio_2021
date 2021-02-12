@@ -56,4 +56,12 @@ export class Client {
     }`);
   }
 
+  fetchAuthor = () => {
+    return this.client
+    .fetch(`*[_type == "author"]{
+      bio,
+      "authorImage": image.asset-url
+    }`);
+  }
+
 };
