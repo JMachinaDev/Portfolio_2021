@@ -8,13 +8,16 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 1040;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
 }
 
 .modal-backdrop .modal-backdrop .show {
@@ -63,6 +66,7 @@
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100%;
+  color: #eeeeee;
   pointer-events: auto;
   background-clip: padding-box;
   border-radius: 10px;
@@ -113,6 +117,7 @@ textarea {
   padding: 1rem 1.5rem;
   margin: 8px 0;
   display: inline-block;
+  color: var(--text-dark);
   border: 1px solid #ccc;
   border-radius: 4px;
   -webkit-box-sizing: border-box;
@@ -125,7 +130,7 @@ textarea {
   font-weight: 600;
   letter-spacing: 1px;
   text-align: left;
-  color: var(--text-light);
+  color: var(--text-dark);
 }
 
 .submit-button {
