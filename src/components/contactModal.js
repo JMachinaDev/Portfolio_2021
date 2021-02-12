@@ -17,7 +17,7 @@ export default function DisplayModal (props) {
   }
 
   return (
-    <Modal className="modal-content-box modal-style med-theme border-style" show={show} onHide={handleClose} >
+    <Modal className="modal-content-box modal-style med-theme" show={show} onHide={handleClose} >
       <Modal.Header closeButton/>
       <Modal.Body>
         <main className="modal-form">
