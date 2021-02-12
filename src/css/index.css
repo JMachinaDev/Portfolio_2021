@@ -1,8 +1,17 @@
 @import url(https://unpkg.com/@tailwindcss/typography@0.2.x/dist/typography.min.css);
 @import url(https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css);
 @import url(https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap);
-
+html,
+body {
+	margin: 0 auto;
+	height: auto;
+	overflow-x: hidden !important;
+	overflow-y: auto;
+	background-color: #1b222b;
+}
 :root {
+	overflow-x: hidden !important;
+	overflow-y: auto;
 	--gradiant-red: linear-gradient(
 		90deg,
 		hsla(52, 82%, 52%, 1) 0%,
@@ -31,12 +40,17 @@
 .cursive {
 	font-family: var(--apple-font);
 	font-weight: 700;
-	color: var(--light-background);
+	color: var(--text-dark);
 }
 .aesthetic {
 	font-family: var(---helv-font);
 	color: var(--text-light);
 	letter-spacing: 0.5px;
+}
+.article {
+	font-family: var(---helv-font);
+	color: var(--text-dark);
+	font-weight: 700;
 }
 .text-blue {
 	color: var(--blue-background);
@@ -97,6 +111,22 @@
 	text-align: left;
 	letter-spacing: 1px;
 	margin: 1rem 0 0 0.5rem 0;
+}
+.contact-button {
+	background-color: #5f7fff;
+	color: #1b222b;
+	border: 1px solid #fff;
+	border-radius: 3px;
+	font-family: "Poppins";
+	font-weight: 700;
+	padding: 6px 25px;
+	box-shadow: none;
+}
+.contact-button:hover {
+	color: #eeeeee;
+	box-shadow: none;
+	text-shadow: 1px 1px #fe7302, 2px 2px #fe7302, 3px 3px #fe7302,
+		4px 4px #fe7302, 5px 5px #fe7302, 6px 6px #fe7302;
 }
 .border-style {
 	border-left: 4px solid var(--light-background);
