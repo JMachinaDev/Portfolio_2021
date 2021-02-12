@@ -36,12 +36,12 @@ export default function About () {
             />
           </div>
           <div className="about-content text-lg">
-              <BlockContent
-                className="text-base font-semibold text-gray-300 prose lg:prose-xl"
-                blocks={author.bio}
-                projectId="3ftsgi69"
-                dataset="production"
-              />
+            <BlockContent
+              className="text-base font-semibold text-gray-300 prose lg:prose-xl"
+              blocks={author.bio}
+              projectId="3ftsgi69"
+              dataset="production"
+            />
           </div>
         </section>
       </div>

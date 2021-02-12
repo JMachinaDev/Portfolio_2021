@@ -1,0 +1,18 @@
+.about-container {
+	display: grid;
+	grid-template-areas:
+		"header header"
+		"image cont";
+}
+.about-header {
+	grid-area: header;
+	text-align: center;
+}
+.about-image {
+	grid-area: image;
+	margin: auto;
+}
+.about-content {
+	grid-area: cont;
+	padding: 1rem;
+}
