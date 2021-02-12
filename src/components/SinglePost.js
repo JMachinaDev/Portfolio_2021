@@ -20,10 +20,10 @@ export default function SinglePost () {
       _id,
       slug,
       mainImage{
-          asset->{
-              _id,
-              url
-          }
+        asset->{
+          _id,
+          url
+        }
       },
       body,
       "name": author->name,
@@ -31,7 +31,7 @@ export default function SinglePost () {
     }`)
     .then((data)=> setSinglePost(data[0]))
     .catch(console.error);
-  }, [slug]);
+}, [slug]);
 
   if(!singlePost) return <div className="bg-gray-900 text-gray-100 w-full h-full absolute flex justify-center">Loading...</div>;
 

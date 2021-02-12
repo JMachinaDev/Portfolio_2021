@@ -57,12 +57,12 @@
 /*  */
 
 .title-style {
-	color: var(--text-light);
 	font-family: var(--helv-font);
 	font-size: 4em;
 	font-weight: 600;
 	letter-spacing: 1px;
 	text-align: left;
+	color: var(--text-light);
 }
 .project-style {
 	font-family: var(--helv-font);
