@@ -30,7 +30,7 @@ export default function Home (props) {
       <section className="container-glass" id='seq'>
         <section className="card-top-section  font-semibold">
           <div className="work-status">Open For Work</div>
-          <img id="img-profile" alt=""/>
+          <img id="img-profile" src={require('../images/profile.png')} alt=""/>
           <header>
             <h2>I'm Josue.</h2>
           </header>
